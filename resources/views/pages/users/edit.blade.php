@@ -87,6 +87,38 @@
                                 <label>Phone</label>
                                 <input type="number" class="form-control" name="phone" value="{{ $user->phone }}">
                             </div>
+
+                            {{-- POSITION --}}
+                            <div class="form-group">
+                                <label>Position</label>
+                                <input type="text"
+                                    class="form-control @error('position')
+                                is-invalid
+                            @enderror"
+                                    name="position" value="{{ $user->position }}">
+                                @error('position')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            {{-- DEPARTMENT --}}
+                            <div class="form-group">
+                                <label>Department</label>
+                                <input type="text"
+                                    class="form-control @error('department')
+                                is-invalid
+                            @enderror"
+                                    name="department" value="{{ $user->department }}">
+                                @error('department')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            {{--  --}}
                             <div class="form-group">
                                 <label class="form-label">Roles</label>
                                 <div class="selectgroup w-100">

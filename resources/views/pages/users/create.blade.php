@@ -82,10 +82,43 @@
                                     </div>
                                 @enderror
                             </div>
+                            {{-- phone --}}
                             <div class="form-group">
                                 <label>Phone</label>
                                 <input type="number" class="form-control" name="phone">
                             </div>
+
+                            {{-- POSITION --}}
+                            <div class="form-group">
+                                <label>Position</label>
+                                <input type="text"
+                                    class="form-control @error('position')
+                                is-invalid
+                            @enderror"
+                                    name="position">
+                                @error('position')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            {{-- DEPARTMENT --}}
+                            <div class="form-group">
+                                <label>Department</label>
+                                <input type="text"
+                                    class="form-control @error('department')
+                                is-invalid
+                            @enderror"
+                                    name="department">
+                                @error('department')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            {{--  --}}
                             <div class="form-group">
                                 <label class="form-label">Roles</label>
                                 <div class="selectgroup w-100">
