@@ -16,5 +16,5 @@ Route::post('/login', [App\Http\Controllers\Api\AuthController::class, 'login'])
 //API logout berhubungan dengan AuthController
 Route::post('/logout', [App\Http\Controllers\Api\AuthController::class, 'logout'])->middleware('auth:sanctum');
 
-//register
-// Route::post('/register', [App\Http\Controllers\Api\AuthController::class, 'register']);
+//company
+Route::get('/company', [App\Http\Controllers\Api\CompanyController::class, 'show'])->middleware('auth:sanctum');
